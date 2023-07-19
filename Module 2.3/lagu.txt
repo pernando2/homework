@@ -1,0 +1,23 @@
+title : Loneliness
+"artists": "Putri airiani"
+url : song/Putri Ariani - Loneliness (Official).mp3
+
+"title": "Angels like you",
+"artists": "Miley Crush",
+url : song/Miley Cyrus - Angels Like You (Official Video).mp3
+
+"title": "Life Could Be A Dream",
+"artists": "Street Corner Renaissance",
+url : song/Street Corner Renaissance - Life Could Be A Dream.mp3
+
+"title": "Human",
+"artists": "Rag n Bone Man",
+url : song/Rag n Bone Man - Human (Official Video).mp3
+
+"title": "Dog Days Are Over",
+"artists": "Florence + The Machine",
+url : song/Florence + The Machine - Dog Days Are Over (2010 Version) (Official Music Video).mp3
+
+"title": "Someone You Loved",
+"artists": "Lewis Capaldi",
+url : song/Lewis Capaldi - Someone You Loved.mp3

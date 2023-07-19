@@ -1,0 +1,81 @@
+[{
+    "id": 1,
+    "title": "Loneliness",
+    "artists": "Putri airiani",
+    "duration": "3:34"
+  },
+  {
+    "id": 2,
+    "title": "Angels like you",
+    "artists": "Miley Crush",
+    "duration": "3:34"
+  },
+  {
+    "id": 3,
+    "title": "Life Could Be A Dream",
+    "artists": "Street Corner Renaissance",
+    "duration": "3:34"
+  },
+  {
+    "id": 4,
+    "title": "Human",
+    "artists": "Rag n Bone Man",
+    "duration": "3:34"
+  },
+  {
+    "id": 5,
+    "title": "Dog Days Are Over",
+    "artists": "Florence + The Machine",
+    "duration": "3:34"
+  },
+  {
+    "id": 6,
+    "title": "Someone You Loved",
+    "artists": "Lewis Capaldi",
+    "duration": "3:34"
+  }
+]
+
+
+db.song.insertMany([
+  {"title":"Loneliness", "artists":["Putri airiani"]},
+  {"title":"Angels like you", "artists":["Miley Crush"]},
+  {"title":"Life Could Be A Dream", "artists":["Street Corner Renaissance"]},
+  {"title":"Human", "artists":["Rag n Bone Man"]},
+  {"title":"Dog Days Are Over", "artists":["Florence", "The Machine"]},
+  {"title":"Someone You Loved", "artists":["Lewis Capaldi"]},
+  {"title":"Grenade", "artists":["Bruno Mars"]},
+  {"title":"It Will Rain", "artists":["Bruno Mars"]},
+  {"title":"When i Was Your Man", "artists":["Bruno Mars"]},
+  {"title":"Let Her Go", "artists":["Passenger"]},
+  {"title":"Venom", "artists":["Eminem"]},
+  {"title":"Matsuri", "artists":["Fujii Kaze"]},
+  {"title":"Koiiro", "artists":["Mosawo"]},
+  {"title":"Lyra", "artists":["Yuuri"]},
+  {"title":"Astronout", "artists":["Yuuri"]},
+  {"title":"Creep", "artists":["Radiohead"]},
+  {"title":"Reckless", "artists":["Madison Beer"]},
+  {"title":"One of Those Things", "artists":["Sture Zetterberg"]},
+  {"title":"Speechless", "artists":["Naomi Scott"]},
+  {"title":"Flying High", "artists":["JKT48"]},
+])
+
+db.song.insertMany([
+  {"title":"Loneliness", "artists":["Putri airiani"]},
+  {"title":"Angels like you", "artists":["Miley Crush"]},
+  {"title":"Life Could Be A Dream", "artists":["Street Corner Renaissance"]},
+  {"title":"Human", "artists":["Rag n Bone Man"]},
+  {"title":"Dog Days Are Over", "artists":["Florence", "The Machine"]},
+  {"title":"Someone You Loved", "artists":["Lewis Capaldi"]},
+  {"title":"Grenade", "artists":["Bruno Mars"]},
+  {"title":"It Will Rain", "artists":["Bruno Mars"]},
+  {"title":"When i Was Your Man", "artists":["Bruno Mars"]},
+  {"title":"Let Her Go", "artists":["Passenger"]},
+  {"title":"Venom", "artists":["Eminem"]},
+])
+
+// db.songs.find().sort({'artists':1})
+// db.songs.find().sort({'countPlayed':1})
+// db.songs.find().sort({'release_date':1})
+
+db.songs.aggregate([{$group:{"_id":"release_date"}}])
