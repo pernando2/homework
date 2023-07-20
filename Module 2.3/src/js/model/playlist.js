@@ -17,7 +17,6 @@ function getPlayList() {
 
 
 function getCountedPlayList() {
-  playlists.sort((a, b) => b.count - a.count);
   return playlists;
 }
 

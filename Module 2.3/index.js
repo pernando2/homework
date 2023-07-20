@@ -16,6 +16,9 @@ app.use(express.json());
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "index3.html"));
 });
+app.get("/mostplayed", (req, res) => {
+  res.sendFile(path.join(__dirname, "index2.html"));
+});
 app.use('/', router);
 
 

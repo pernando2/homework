@@ -54,7 +54,7 @@
                 </li>
 
                 <li>
-                    <a href="http://localhost:3000/mostplayed">
+                    <a href="#">
                         <span class="fa fas fa-heart"></span>
                         <span>Most Played</span>
                     </a>
@@ -90,21 +90,21 @@
             </div>
         </div>
 
-        <div class="spotify-playlists">
+        <!-- <div class="spotify-playlists">
             <h2>My Playlists</h2>
 
             <div class="list" id="spotify-playlists">
 
             </div>
-        </div>
-
-        <!-- <div class="spotify-playlists">
-            <h2>Most Played Song</h2>
-            <div class="list" id="mostPlayedSongs">
-            </div>
         </div> -->
 
         <div class="spotify-playlists">
+            <h2>Most Played Song</h2>
+            <div class="list" id="mostPlayedSongs">
+            </div>
+        </div>
+
+        <!-- <div class="spotify-playlists">
             <h2>Focus</h2>
             <div class="list">
                 <div class="item">
@@ -258,7 +258,7 @@
             </div>
 
             <hr />
-        </div>
+        </div> -->
         <div class="spotify-playlists">
             <div class="music-player" id="putarLagu">
                 <div class="song-bar">
@@ -313,5 +313,31 @@
     <script src="js/script.js"></script>
 </body>
 
-
+<script>
+    fetch("http://localhost:3000/countedPlaylist")
+        .then((response) => response.json())
+        .then((json) => {
+            dataFetched = true;
+            json.sort((a, b) => b.count - a.count);
+            if (json.length === 0) {
+                document.getElementById(
+                    "mostPlayedSongs"
+                ).innerHTML = `<p style="color: whitesmoke;">Belum ada Lagu sering didengar</p>`;
+            } else {
+                for (let index = 0; index < json.length; index++) {
+                    let htmlCard = `<div class="item " id="mostPlayedSong">
+                    <img src="https://t2.genius.com/unsafe/315x315/https%3A%2F%2Fimages.genius.com%2Fffc9b04c904e0a9c815fd4e923594974.1000x1000x1.jpg" />
+                    <div class="play">
+                    <span class="fa fa-play" onclick="playSong('${json[index].url}', '${json[index].title}', '${json[index].artist}')"></span>
+                    </div>
+                    <h4>${json[index].title} - ${json[index].artist}</h4>
+                    <p>Lagu Diputar ${json[index].count} Kali </p>
+                    </div>`;
+                    document.getElementById("mostPlayedSongs").innerHTML += htmlCard;
+                    // document.getElementById('mostPlayedSong').remove();
+                }
+            }
+            console.log(json);
+        });
+</script>
 </html>
