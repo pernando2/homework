@@ -73,34 +73,34 @@ function incrementPlayCount(title, artist) {
 }
 let dataFetched = false;
 let mostPlayedSongs = document.getElementById("mostPlayedSongs");
-function getMostPlayedSong() {
-    if (dataFetched) {
-        while (mostPlayedSongs.firstChild) {
-            mostPlayedSongs.removeChild(mostPlayedSongs.firstChild);
-        }
-    }
-    // fetch("http://localhost:3000/countedPlaylist")
-    //     .then((response) => response.json())
-    //     .then((json) => {
-    //         dataFetched = true;
-    //         if (json.length === 0) {
-    //             document.getElementById(
-    //                 "mostPlayedSongs"
-    //             ).innerHTML = `<p style="color: whitesmoke;">Belum ada Lagu sering didengar</p>`;
-    //         } else {
-    //             for (let index = 0; index < json.length; index++) {
-    //                 let htmlCard = `<div class="item " id="mostPlayedSong">
-    //                 <img src="https://t2.genius.com/unsafe/315x315/https%3A%2F%2Fimages.genius.com%2Fffc9b04c904e0a9c815fd4e923594974.1000x1000x1.jpg" />
-    //                 <div class="play">
-    //                 <span class="fa fa-play" onclick="playSong('${json[index].url}', '${json[index].title}', '${json[index].artist}')"></span>
-    //                 </div>
-    //                 <h4>${json[index].title} - ${json[index].artist}</h4>
-    //                 <p>Lagu Diputar ${json[index].count} Kali </p>
-    //                 </div>`;
-    //                 document.getElementById("mostPlayedSongs").innerHTML += htmlCard;
-    //                 // document.getElementById('mostPlayedSong').remove();
-    //             }
-    //         }
-    //         console.log(json);
-    //     });
-}
+// function getMostPlayedSong() {
+//     if (dataFetched) {
+//         while (mostPlayedSongs.firstChild) {
+//             mostPlayedSongs.removeChild(mostPlayedSongs.firstChild);
+//         }
+//     }
+//     fetch("http://localhost:3000/countedPlaylist")
+//         .then((response) => response.json())
+//         .then((json) => {
+//             dataFetched = true;
+//             if (json.length === 0) {
+//                 document.getElementById(
+//                     "mostPlayedSongs"
+//                 ).innerHTML = `<p style="color: whitesmoke;">Belum ada Lagu sering didengar</p>`;
+//             } else {
+//                 for (let index = 0; index < json.length; index++) {
+//                     let htmlCard = `<div class="item " id="mostPlayedSong">
+//                     <img src="https://t2.genius.com/unsafe/315x315/https%3A%2F%2Fimages.genius.com%2Fffc9b04c904e0a9c815fd4e923594974.1000x1000x1.jpg" />
+//                     <div class="play">
+//                     <span class="fa fa-play" onclick="playSong('${json[index].url}', '${json[index].title}', '${json[index].artist}')"></span>
+//                     </div>
+//                     <h4>${json[index].title} - ${json[index].artist}</h4>
+//                     <p>Lagu Diputar ${json[index].count} Kali </p>
+//                     </div>`;
+//                     document.getElementById("mostPlayedSongs").innerHTML += htmlCard;
+//                     // document.getElementById('mostPlayedSong').remove();
+//                 }
+//             }
+//             console.log(json);
+//         });
+// }
